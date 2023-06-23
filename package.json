@@ -1,0 +1,27 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "My Vue.js and Node.js app",
+    "scripts": {
+        "install:front": "cd ./app/frontend && npm install",
+        "install:back": "cd ./app/backend && npm install",
+        "install:apps": "npm run install:front && npm run install:back",
+        "compose:up": "cd app && docker-compose up -d --build",
+        "compose:down": "cd app && docker-compose down --remove-orphans",
+        "logs": "cd app && docker-compose logs -f",
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql2": "2.3.3",
+        "sequelize": "^6.9.0",
+        "sequelize-cli": "6.4.1"
+    },
+    "devDependencies": {
+        "@vue/cli-service": "^4.5.13",
+        "nodemon": "^2.0.13"
+    }
+}

@@ -1,6 +1,15 @@
-class App {
+const express = require('express');
+require('express-async-errors');
+const routerProduto = require('./routers/produto');
 
-}
+const app = express();
 
-export { App };
-export const { app } = new App();
+app.get('/', (_request, response) => {
+  response.send();
+});
+
+app.use(express.json());
+
+app.use('/produto', routerProduto);
+
+module.exports = app;

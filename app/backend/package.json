@@ -2,12 +2,12 @@
     "name": "app-backend",
     "version": "1.0.0",
     "description": "",
-    "main": "./server",
+    "main": "../server",
     "scripts": {
         "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
         "prestart": "npm run build && npm run db:reset",
         "build": "app --project",
-        "start": "node ./server",
+        "start": "node ../server",
         "predev": "npm run db:reset"
     },
     "devDependencies": {

@@ -1,5 +1,6 @@
-import { App } from './app';
+const app = require('./app');
 
-const PORT = process.env.APP_PORT || 3001;
+// não remova a variável `API_PORT` ou o `listen`
+const port = process.env.API_PORT || 3001;
 
-new App().start(PORT);
+app.listen(port, () => console.log('ouvindo porta', port));

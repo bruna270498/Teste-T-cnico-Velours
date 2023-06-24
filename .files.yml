@@ -1,0 +1,14 @@
+ignore_files:
+  - package.json
+  - package-lock.json
+  - .gitignore
+  - ./app/frontend/public
+  - ./app/frontend/src
+  - ./app/frontend/.gitignore
+  - ./app/frontend/package.json
+  - ./app/frontend/package-lock.json
+  - ./app/backend/.gitignore
+  - ./app/backend/.sequelizerc
+  - ./app/backend/package.json
+  - ./app/backend/package-lock.json
+  - ./app/docker-compose.yml

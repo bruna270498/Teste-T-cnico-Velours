@@ -8,6 +8,7 @@
         "prestart": "npm run build && npm run db:reset",
         "build": "app --project",
         "start": "node ../server",
+        "dev": "nodemon .",
         "predev": "npm run db:reset"
     },
     "devDependencies": {

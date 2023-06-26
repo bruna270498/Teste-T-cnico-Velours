@@ -22,6 +22,9 @@ Produto.init({
   description: {
     type: DataTypes.STRING,
   },
+  image: {
+    type: DataTypes.STRING,
+  },
   tipo: {
     type: DataTypes.STRING,
     allowNull: false

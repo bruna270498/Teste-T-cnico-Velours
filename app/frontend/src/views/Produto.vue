@@ -8,6 +8,7 @@
         <p>Tipo: {{ produto.type }}</p>
         <p>Preço: {{ produto.price }}</p>
         <p>{{ produto.description }}</p>
+        <button @click="verDetalhes(produto.id)">Detalhes</button>
       </div>
     </div>
     <div v-else>
@@ -36,7 +37,10 @@ export default {
       } catch (error) {
         console.error(error);
       }
-    }
+    },
+    verDetalhes(id) {
+      this.$router.push(`/produto/${id}`)
+    },
   },
   mounted() {
     this.produtosAll(); // Chamada do método produtosAll() durante o ciclo de vida do componente

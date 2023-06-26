@@ -20,7 +20,7 @@
   
   <script>
   export default {
-    name: 'Produtos',
+    name: 'Produto',
     data() {
       return {
         product: []

@@ -2,13 +2,7 @@
 const { DataTypes, Model } = require('sequelize');
 const sequelize = require('.');
 
-class Produto extends Model {
-  name;
-  price;
-  description;
-  tipo;
-  id;
-}
+class Produto extends Model {}
 
 Produto.init({
   name: {
@@ -20,6 +14,9 @@ Produto.init({
     allowNull: false
   },
   description: {
+    type: DataTypes.STRING,
+  },
+  image: {
     type: DataTypes.STRING,
   },
   tipo: {

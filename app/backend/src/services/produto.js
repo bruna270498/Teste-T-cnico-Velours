@@ -19,16 +19,17 @@ class ServiceProduto {
         produto.price = infoProduto.price;
         produto.tipo = infoProduto.tipo;
         produto.description = infoProduto.description;
+        produto.image = infoProduto.image;
         const update = await produto.save();
         return update;
     }
-    async newProduct({name, price, tipo, description}) {
-        const productNew = await this.model.create({name, price, tipo, description});
+    async newProduct({name, price, tipo, description, image}) {
+        const productNew = await this.model.create({name, price, tipo, description, image});
         return productNew;
     }
     async productDelete(id) {
         const product = await this.model.findByPk(id);
-        await produto.destroy();
+        await product.destroy();
     }
 };
 

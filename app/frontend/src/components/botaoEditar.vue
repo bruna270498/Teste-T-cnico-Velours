@@ -48,9 +48,9 @@
     async created() {
       try {
         // Obter o ID do produto da URL
-        const productId = this.$route.params.id;
+        const id = this.$route.params.id;
         // Fazer uma requisição GET para a API para obter os detalhes do produto
-        const response = await fetch(`http://localhost:3000/produtos/${productId}`);
+        const response = await fetch(`http://localhost:3000/produto/${id}`);
         if (response.ok) {
           const data = await response.json();
           this.product = data;
@@ -80,9 +80,9 @@
       async updateProduct() {
         try {
           // Obter o ID do produto da URL
-          const productId = this.$route.params.id;
+          const id = this.$route.params.id;
           // Fazer uma requisição PUT para a API para atualizar os dados do produto
-          const response = await fetch(`http://localhost:3000/produtos/${productId}`, {
+          const response = await fetch(`http://localhost:3000/produto/${id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
@@ -92,7 +92,7 @@
           if (response.ok) {
             console.log('Produto atualizado com sucesso');
             // Redirecionar para a página de detalhes do produto
-            this.$router.push(`/detalhes/${productId}`);
+            this.$router.push(`/detalhes/${id}`);
           } else {
             console.error('Erro ao atualizar o produto');
           }

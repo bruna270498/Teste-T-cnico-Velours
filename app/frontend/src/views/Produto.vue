@@ -26,7 +26,7 @@ export default {
   methods: {
     async produtosAll() {
       try {
-        const response = await fetch("http://localhost:3000/produtos", {
+        const response = await fetch("http://localhost:3000/produto", {
           method: 'GET'
         });
         const data = await response.json();

@@ -3,12 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/produtos',
+    path: '/',
     name: 'Produtos',
     component: () => import(/* webpackChunkName: "produtos" */ '../views/Produto.vue')
   },
   {
-    path: '/produtos/:id',
+    path: '/produto/:id',
     name: 'Produto',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

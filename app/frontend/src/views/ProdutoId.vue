@@ -9,6 +9,7 @@
             <p>Tipo: {{ produto.tipo }}</p>
             <p>Preço: {{ produto.price }}</p>
             <p>{{ produto.description }}</p>
+            <DeleteButton />
           </div>
         </div>
         <div v-else>
@@ -19,8 +20,12 @@
   </template>
   
   <script>
+  import DeleteButton from '@/components/botaoDelete.vue';
   export default {
     name: 'Produto',
+    components: {
+    DeleteButton
+},
     data() {
       return {
         product: []

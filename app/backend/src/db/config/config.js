@@ -2,6 +2,8 @@
 
 exports.__esModule = true;
 
+const path = require('path');
+
 const config = {
     username: process.env.DB_USER || 'root',
     password: process.env.DB_PASS || '123456',
@@ -12,6 +14,12 @@ const config = {
     dialectOptions: {
         timezone: 'Z'
     },
-    logging: false
+    logging: false,
+    configFilePath: path.resolve(__dirname, 'config.js'),
 };
-module.exports = config;
+
+module.exports = {
+    development: {
+      ...config,
+    },
+}

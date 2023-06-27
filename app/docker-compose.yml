@@ -3,25 +3,26 @@ version: '3.9'
 services:
   frontend:
     container_name: app_frontend
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
-    working_dir: /app/frontend
+    working_dir: /frontend
     volumes:
       - ./frontend/src:/app/frontend/src
 
   backend:
     container_name: app_backend
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
       - 3001:3001
-    working_dir: /app/backend
-    command: dev
     volumes:
-      - ./backend/src:/app/backend/src
+      - ./backend:/app
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     environment:
       - APP_PORT=3001
       - DB_USER=root

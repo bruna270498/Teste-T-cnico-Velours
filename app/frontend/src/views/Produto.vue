@@ -5,9 +5,7 @@
       <div v-for="produto in product" :key="produto.id">
         <img :src="produto.image" alt="produto.name" />
         <h3>{{ produto.name }}</h3>
-        <p>Tipo: {{ produto.type }}</p>
         <p>Preço: {{ produto.price }}</p>
-        <p>{{ produto.description }}</p>
         <button @click="verDetalhes(produto.id)">Detalhes</button>
       </div>
     </div>

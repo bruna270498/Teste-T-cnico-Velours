@@ -1,4 +1,4 @@
-const Produto = require('../db/models');
+const Produto = require('../db/models/produto');
 
 class ServiceProduto {
     model = new Produto()

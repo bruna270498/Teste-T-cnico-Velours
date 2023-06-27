@@ -2,7 +2,7 @@
     "name": "app-backend",
     "version": "1.0.0",
     "description": "",
-    "main": "../server",
+    "main": "./src/server.js",
     "scripts": {
         "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
         "prestart": "npm run build && npm run db:reset",
@@ -12,14 +12,15 @@
         "predev": "npm run db:reset"
     },
     "devDependencies": {
-        "sequelize-cli": "6.3.0",
         "chai": "4.3.6",
-        "chai-http": "4.3.0"
+        "chai-http": "4.3.0",
+        "nodemon": "^2.0.22",
+        "sequelize-cli": "6.3.0"
     },
     "dependencies": {
         "express": "4.17.1",
         "express-async-errors": "3.1.1",
-        "mysql2": "2.3.3",
-        "sequelize": "6.25.5"
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.25.5"
     }
 }

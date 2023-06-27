@@ -1,6 +1,6 @@
 <template>
     <div class="paiProdutoId">
-      <h1>Produto</h1>
+      <h1>Detalhes do Produto</h1>
       <div class="produto">
         <div v-if="product && product.length > 0">
           <div v-for="produto in product" :key="produto.id">
@@ -10,6 +10,7 @@
             <p>Preço: {{ produto.price }}</p>
             <p>{{ produto.description }}</p>
             <DeleteButton />
+            <botaoEditar />
           </div>
         </div>
         <div v-else>
@@ -21,14 +22,16 @@
   
   <script>
   import DeleteButton from '@/components/botaoDelete.vue';
+  import botaoEditar from '@/components/botaoEditar.vue';
   export default {
     name: 'Produto',
     components: {
-    DeleteButton
+    DeleteButton,
+    botaoEditar
 },
     data() {
       return {
-        product: []
+        product: [{}]
       }
     },
     methods: {

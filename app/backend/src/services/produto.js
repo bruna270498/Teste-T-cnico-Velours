@@ -29,7 +29,7 @@ class ServiceProduto {
     }
     async productDelete(id) {
         const product = await this.model.findByPk(id);
-        await produto.destroy();
+        await product.destroy();
     }
 };
 

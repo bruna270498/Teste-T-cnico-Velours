@@ -10,7 +10,7 @@ services:
       - 3000:3000
     working_dir: /frontend
     volumes:
-      - ./frontend/src:/app/frontend/src
+      - ./frontend:/app
 
   backend:
     container_name: app_backend

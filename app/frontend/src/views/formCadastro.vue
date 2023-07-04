@@ -3,7 +3,7 @@
     <h1>Formulário de Cadastro</h1>
     <form @submit="submitForm">
       <div>
-        <label for="name">Nome:</label>
+        <label for="name">Nome</label>
         <input type="text" id="name" v-model="form.name" required>
       </div>
       <div>
@@ -48,7 +48,7 @@ export default {
         // Converte a imagem para uma string base64 antes de enviar
         this.form.image = this.imageUrl;
 
-        const response = await fetch('http://localhost:3000/produto', {
+        const response = await fetch('http://localhost:3001/produto', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -32,3 +32,4 @@ modelName: 'Produto'
 );
 
 module.exports = Produto;
+

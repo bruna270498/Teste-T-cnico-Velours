@@ -3,7 +3,7 @@
     <h1>Formulário de Cadastro</h1>
     <form @submit="submitForm">
       <div>
-        <label for="name">Nome</label>
+        <label for="name">Nome:</label>
         <input type="text" id="name" v-model="form.name" required>
       </div>
       <div>

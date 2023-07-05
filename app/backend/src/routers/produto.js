@@ -1,9 +1,10 @@
 const { Router } = require('express');
 const ControllerProduto = require('../controllers/produto');
+// Corrigir o caminho do controlador
 const productNotFound = require('../middlewares/validacoes')
 
+const produtoController = new ControllerProduto();
 routerProduto = Router();
-produtoController = new ControllerProduto();
 
 routerProduto.get('/', produtoController.findAll);
 routerProduto.get('/:id', productNotFound, produtoController.findBy);

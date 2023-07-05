@@ -1,7 +1,7 @@
 const Produto = require('../db/models/produto');
 
 class ServiceProduto {
-    model = new Produto()
+    model =  Produto;
     constructor() {
         this.model = Produto;
     }
